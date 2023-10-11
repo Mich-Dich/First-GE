@@ -27,9 +27,15 @@
     <ClInclude Include="src\Gluttony\EntryPoint.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="src\Gluttony\Log.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Gluttony\Application.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Gluttony\Log.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

@@ -6,11 +6,15 @@ extern Gluttony::Application* Gluttony::CreateApplication();
 
 int main(int argc, char** argv) {
 
-	printf("Starting Gluttony Engine");
+	Gluttony::Log::Init();
+
+	GL_CORE_LOG_INFO("Engine initialises Logging system");
+	int a = 42;
+	GL_LOG_TRACE("var Test={0}", a);
+
 	auto app = Gluttony::CreateApplication();
 	app->Run();
 	delete app;
 
 }
-
 #endif
