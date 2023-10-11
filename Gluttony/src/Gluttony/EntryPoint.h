@@ -10,7 +10,7 @@ int main(int argc, char** argv) {
 
 	GL_CORE_LOG_INFO("Engine initialises Logging system");
 	int a = 42;
-	GL_LOG_TRACE("var Test={0}", a);
+	GL_LOG_WARM("Answer: {0}", a);
 
 	auto app = Gluttony::CreateApplication();
 	app->Run();
