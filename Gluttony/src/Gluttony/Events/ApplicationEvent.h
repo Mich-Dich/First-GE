@@ -2,8 +2,6 @@
 
 #include "Event.h"
 
-#include <sstream>
-
 namespace Gluttony {
 
 	class GLUTTONY_API WindowResizeEvent : public Event {
@@ -20,7 +18,7 @@ namespace Gluttony {
 		// not the most memory efficient but bood for now
 		std::string ToString() const override {
 			std::stringstream ss;
-			ss << "WindowResizeEvent: " << m_Width << ", " << m_Height;
+			ss << "WindowResizeEvent: [X: " << m_Width << ", Y:" << m_Height << "]";
 			return ss.str();
 		}
 

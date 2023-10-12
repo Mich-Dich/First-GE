@@ -2,6 +2,8 @@
 .vs/
 bin/
 bin-int/
+Gluttony/EngineLogs/
+Gluttony/ApplicationLogs/
 
 # Files
 *.user

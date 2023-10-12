@@ -1,1 +1,0 @@
-$(SolutionDir)bin\$(Configuration)-$(Platform)\$(ProjectName)\

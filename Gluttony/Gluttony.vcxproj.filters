@@ -4,6 +4,9 @@
     <Filter Include="Gluttony">
       <UniqueIdentifier>{AB24E794-97F1-41A0-C00A-3048AC36772E}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Gluttony\Events">
+      <UniqueIdentifier>{2F826508-9B0D-D3CC-A41E-56C110292FCD}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Gluttony.h" />
@@ -16,13 +19,22 @@
     <ClInclude Include="src\Gluttony\EntryPoint.h">
       <Filter>Gluttony</Filter>
     </ClInclude>
+    <ClInclude Include="src\Gluttony\Events\ApplicationEvent.h">
+      <Filter>Gluttony\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Gluttony\Events\Event.h">
+      <Filter>Gluttony\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Gluttony\Events\KeyEvent.h">
+      <Filter>Gluttony\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Gluttony\Events\MouseEvent.h">
+      <Filter>Gluttony\Events</Filter>
+    </ClInclude>
     <ClInclude Include="src\Gluttony\Log.h">
       <Filter>Gluttony</Filter>
     </ClInclude>
-    <ClInclude Include="src\Gluttony\Events\Event.h" />
-    <ClInclude Include="src\Gluttony\Events\ApplicationEvent.h" />
-    <ClInclude Include="src\Gluttony\Events\KeyEvent.h" />
-    <ClInclude Include="src\Gluttony\Events\MouseEvent.h" />
+    <ClInclude Include="src\glpch.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Gluttony\Application.cpp">
@@ -31,5 +43,6 @@
     <ClCompile Include="src\Gluttony\Log.cpp">
       <Filter>Gluttony</Filter>
     </ClCompile>
+    <ClCompile Include="src\glpch.cpp" />
   </ItemGroup>
 </Project>

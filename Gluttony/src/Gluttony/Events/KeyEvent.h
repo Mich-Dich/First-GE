@@ -2,8 +2,6 @@
 
 #include "Event.h"
 
-#include <sstream>
-
 namespace Gluttony {
 
 	// Cant be used directly (protected constructor) Use [class KeyPressedEvent] instead

@@ -1,6 +1,6 @@
 workspace "Gluttony"
     architecture "x64"
-
+    startproject "Sandbox"
     configurations {
         "Debug",
         "Release",
@@ -17,13 +17,16 @@ project "Gluttony"
     targetdir ("bin/" .. outputs .. "/%{prj.name}")
     objdir ("bin-int/" .. outputs .. "/%{prj.name}")
 
+    pchheader "glpch.h"
+    pchsource "Gluttony/src/glpch.cpp"
+
     files {
         "%{prj.name}/src/**.h",
         "%{prj.name}/src/**.cpp"
     }
 
     includedirs {
-        "%{prj.name/src}",
+        "%{prj.name}/src",
         "%{prj.name}/vendor/spdlog/include"
     }
 
