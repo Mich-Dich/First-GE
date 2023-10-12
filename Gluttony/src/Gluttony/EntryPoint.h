@@ -9,7 +9,7 @@ int main(int argc, char** argv) {
 	Gluttony::Log::Init();
 
 	GL_CORE_LOG_INFO("Engine initialises Logging system");
-	int a = 42;
+	int a = 45668;
 	GL_LOG_WARM("Answer: {0}", a);
 
 	auto app = Gluttony::CreateApplication();

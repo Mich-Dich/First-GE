@@ -19,6 +19,10 @@
     <ClInclude Include="src\Gluttony\Log.h">
       <Filter>Gluttony</Filter>
     </ClInclude>
+    <ClInclude Include="src\Gluttony\Events\Event.h" />
+    <ClInclude Include="src\Gluttony\Events\ApplicationEvent.h" />
+    <ClInclude Include="src\Gluttony\Events\KeyEvent.h" />
+    <ClInclude Include="src\Gluttony\Events\MouseEvent.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Gluttony\Application.cpp">

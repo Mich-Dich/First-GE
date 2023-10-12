@@ -1,6 +1,7 @@
 #pragma once
 
 #include "Core.h"
+#include "Events/Event.h"
 
 namespace Gluttony {
 
@@ -19,7 +20,5 @@ namespace Gluttony {
 
 	//To be defined in Client
 	Application* CreateApplication();
-
-
 }
 

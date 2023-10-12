@@ -4,6 +4,7 @@
 
 #include "Core.h"
 #include "spdlog/spdlog.h"
+#include "spdlog/fmt/ostr.h"
 
 namespace Gluttony {
 
@@ -23,7 +24,6 @@ namespace Gluttony {
 
 	};
 }
-
 
 // Logginc macros for CORE
 #define GL_CORE_LOG_TRACE(...)   ::Gluttony::Log::getCoreLogger()->trace(__VA_ARGS__);
