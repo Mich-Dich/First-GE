@@ -1,6 +1,7 @@
 #pragma once
 
-#include "Gluttony/Log.h"
+#include "Log.h"
+#include "Gluttony/Application.h"
 
 #ifdef GL_PLATFORM_WINDOWS
 

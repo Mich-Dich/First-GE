@@ -2,6 +2,8 @@
 
 #include "Gluttony/Core.h"
 
+#include "glpch.h"
+
 namespace Gluttony {
 
 	/*	Future changes - UNFINISHED

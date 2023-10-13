@@ -25,12 +25,19 @@ namespace Gluttony {
 		GL_CORE_LOG(Fatal, e);
 
 
-		GL_LOG(Log, e);
-		GL_LOG(Trace, e);
-		GL_LOG(Success, e);
-		GL_LOG(Warning, e);
-		GL_LOG(Error, e);
-		GL_LOG(Fatal, e);
+		/*
+		GL_CORE_TRACE(e);
+		GL_CORE_INFO(e);
+		GL_CORE_WARN(e);
+		GL_CORE_ERROR(e);
+		GL_CORE_CRITICAL(e);
+
+		GL_TRACE(e);
+		GL_INFO(e);
+		GL_WARN(e);
+		GL_ERROR(e);
+		GL_CRITICAL(e);
+		*/
 
 		while (true);
 
