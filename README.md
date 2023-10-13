@@ -9,3 +9,5 @@ A central focus of Gluttony lies in Procedural Mesh Generation. This feature all
 It's worth noting that Gluttony, as my first self-coded game engine, may have some features that are still in development or may not be as polished as you'd find in established engines or even missing entirely. 
 
 In the end, Gluttony is a canvas, a playground, and an opportunity to learn game development. Embrace it for what it is: an imperfect engine, an opportunity to learn, a space for exploration, and a platform to bring your ideas to life.
+
+In the end, Gluttony is a canvas, a playground, and an opportunity to learn game development. Embrace it for what it is: an imperfect engine, an opportunity to learn, a space for exploration, and a platform to bring your ideas to life.
