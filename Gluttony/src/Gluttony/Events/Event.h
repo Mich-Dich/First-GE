@@ -52,9 +52,7 @@ namespace Gluttony {
 			return GetCategoryFlags() & category;
 		}
 
-	protected:
-		bool m_Handeled = false;
-
+		bool Handeled = false;
 	};
 
 	// Class for Dispaching specific Events
@@ -71,7 +69,7 @@ namespace Gluttony {
 
 			if (m_Event.GetEventType() == T::GetStaticType()) {
 
-				m_Event.m_Handeled = func(*(T*)&m_Event);
+				m_Event.Handeled = func(*(T*)&m_Event);
 				return true;
 			}
 			return false;

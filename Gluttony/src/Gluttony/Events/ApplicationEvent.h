@@ -30,12 +30,12 @@ namespace Gluttony {
 		unsigned int m_Width, m_Height;
 	};
 
-	class GLUTTONY_API WindowsCloseEvent : public Event {
+	class GLUTTONY_API WindowCloseEvent : public Event {
 
 	public:
 
 		// simple Constructor
-		WindowsCloseEvent() {}
+		WindowCloseEvent() {}
 
 		EVENT_CLASS_TYPE(WindowClose)
 		EVENT_CLASS_CATEGORY(EventCategoryApplication)

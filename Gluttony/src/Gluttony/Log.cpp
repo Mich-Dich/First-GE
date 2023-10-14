@@ -11,7 +11,7 @@ namespace Gluttony {
     std::shared_ptr<spdlog::logger> Log::m_EngineLogger;
     std::shared_ptr<spdlog::logger> Log::m_ClientLogger;
     std::string Log::m_ClientLoggerFormat = "[%T - %n] %^%v%$";         // Hardcoded for now - will later maybe be exposed to User
-    std::string Log::m_EngineLoggerFormat = "[%T - %n] %^%v%$";                // Engine logging format - can NOT be changed by user
+    std::string Log::m_EngineLoggerFormat = "[%T - %n] %^%v%$";         // Engine logging format - can NOT be changed by user
 
     void Log::Init() {
 
@@ -52,8 +52,3 @@ namespace Gluttony {
     }
 
 }
-
-/*
-namespace Gluttony {
-
-}*/

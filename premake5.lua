@@ -9,10 +9,20 @@ workspace "Gluttony"
 
 outputs = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 
+VendorIncludeDir = {}
+VendorIncludeDir["GLFW"] = "Gluttony/vendor/GLFW/include"
+VendorIncludeDir["Glad"] = "Gluttony/vendor/Glad/include"
+VendorIncludeDir["ImGui"] = "Gluttony/vendor/imgui"
+
+include "Gluttony/vendor/GLFW"
+include "Gluttony/vendor/Glad"
+include "Gluttony/vendor/imgui"
+
 project "Gluttony"
     location "Gluttony"
     kind "SharedLib"
     language "C++"
+    staticruntime "On" 
 
     targetdir ("bin/" .. outputs .. "/%{prj.name}")
     objdir ("bin-int/" .. outputs .. "/%{prj.name}")
@@ -27,17 +37,29 @@ project "Gluttony"
 
     includedirs {
         "%{prj.name}/src",
-        "%{prj.name}/vendor/spdlog/include"
+        "%{prj.name}/vendor/spdlog/include",
+        "%{VendorIncludeDir.GLFW}",
+        "%{VendorIncludeDir.Glad}",
+        "%{VendorIncludeDir.ImGui}"
+    }
+
+    links {
+        "GLFW",
+        "Glad",
+        "ImGui",
+        "opengl32.lib",
+	    "dwmapi.lib"
     }
 
     filter "system:windows"
-        cppdialect "C++17"
+        cppdialect "C++20"
         staticruntime "On"
         systemversion "latest"
 
         defines {
             "GL_PLATFORM_WINDOWS",
-            "GL_BUILD_DLL"
+            "GL_BUILD_DLL",
+            "GLFW_INCLUDE_NONE"
         }
 
         postbuildcommands {
@@ -46,20 +68,27 @@ project "Gluttony"
 
     filter "configurations:Debug"
         defines "GL_DEBUG"
+        buildoptions "/MDd"
         symbols "On"
         
     filter "configurations:Release"
         defines "GL_RELEASE"
+        buildoptions "/MD"
         optimize "On"
     
     filter "configurations:Dist"
         defines "GL_DIST"
+        buildoptions "/MD"
         optimize "On"
 
+    filter {"system:windows", "configurations:Release"}
+		buildoptions "/MT"
+		
 project "Sandbox"
     location "Gluttony"
     kind "ConsoleApp"
     language "C++"
+    staticruntime "On" 
 
     targetdir ("bin/" .. outputs .. "/%{prj.name}")
     objdir ("bin-int/" .. outputs .. "/%{prj.name}")
@@ -79,7 +108,7 @@ project "Sandbox"
     }
 
     filter "system:windows"
-        cppdialect "C++17"
+        cppdialect "C++20"
         staticruntime "On"
         systemversion "latest"
 
@@ -89,12 +118,19 @@ project "Sandbox"
 
     filter "configurations:Debug"
         defines "GL_DEBUG"
+        buildoptions "/MDd"
         symbols "On"
         
     filter "configurations:Release"
         defines "GL_RELEASE"
+        buildoptions "/MD"
         optimize "On"
 
     filter "configurations:Dist"
         defines "GL_DIST"
+        buildoptions "/MD"
         optimize "On"
+
+    filter {"system:windows", "configurations:Release"}
+		buildoptions "/MT"
+		

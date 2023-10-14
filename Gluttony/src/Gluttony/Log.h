@@ -60,21 +60,25 @@ namespace Gluttony {
 #define GL_CRITICAL(...)      ::Gluttony::Log::getClientLogger()->critical(__VA_ARGS__)*/
 
 
-// Redefine LogLevels of spdlog to be used as variable
-#define LOG_LEVEL(Level)			LOG_LV_##Level
+// Redefine LogLevels of spdlog to custom levels  ==>		Log, Trace, Success, Warning, Error, Fatal
+#define LOG_LEVEL(Level)			LV_##Level
 
-#define LOG_LV_Log			spdlog::level::trace
-#define LOG_LV_Trace		spdlog::level::debug
-#define LOG_LV_Success		spdlog::level::info
-#define LOG_LV_Warning		spdlog::level::warn
-#define LOG_LV_Error		spdlog::level::err
-#define LOG_LV_Fatal		spdlog::level::critical
-
-
-// Logging macro for CORE
-#define GL_CORE_LOG(Level,...)		::Gluttony::Log::getEngineLogger()->log(LOG_LEVEL(Level), __VA_ARGS__)
+#define LV_Log			spdlog::level::trace
+#define LV_Trace		spdlog::level::debug
+#define LV_Success		spdlog::level::info
+#define LV_Warning		spdlog::level::warn
+#define LV_Error		spdlog::level::err
+#define LV_Fatal		spdlog::level::critical
 
 // Logging macro for CLIENT
 #define GL_LOG(Level,...)		::Gluttony::Log::getClientLogger()->log(LOG_LEVEL(Level), __VA_ARGS__)
 
 
+// Logging macroa for CORE
+
+#define GL_CORE_LOG(...)		::Gluttony::Log::getEngineLogger()->log(spdlog::level::trace,__VA_ARGS__)
+#define GL_CORE_TRACE(...)		::Gluttony::Log::getEngineLogger()->log(spdlog::level::debug,__VA_ARGS__)
+#define GL_CORE_SUCCESS(...)	::Gluttony::Log::getEngineLogger()->log(spdlog::level::info,__VA_ARGS__)
+#define GL_CORE_WARN(...)		::Gluttony::Log::getEngineLogger()->log(spdlog::level::warn, __VA_ARGS__)
+#define GL_CORE_ERROR(...)		::Gluttony::Log::getEngineLogger()->log(spdlog::level::err, __VA_ARGS__)
+#define GL_CORE_FATAL(...)		::Gluttony::Log::getEngineLogger()->log(spdlog::level::critical, __VA_ARGS__)

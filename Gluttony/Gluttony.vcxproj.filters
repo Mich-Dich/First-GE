@@ -7,6 +7,12 @@
     <Filter Include="Gluttony\Events">
       <UniqueIdentifier>{2F826508-9B0D-D3CC-A41E-56C110292FCD}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Plattform">
+      <UniqueIdentifier>{5E089A46-CA72-4EBD-13B1-FF627F5A2C12}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Plattform\Windows">
+      <UniqueIdentifier>{9830E16F-0447-DF05-4DBE-6A27B913B08D}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Gluttony.h" />
@@ -31,8 +37,20 @@
     <ClInclude Include="src\Gluttony\Events\MouseEvent.h">
       <Filter>Gluttony\Events</Filter>
     </ClInclude>
+    <ClInclude Include="src\Gluttony\Layer.h">
+      <Filter>Gluttony</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Gluttony\LayerStack.h">
+      <Filter>Gluttony</Filter>
+    </ClInclude>
     <ClInclude Include="src\Gluttony\Log.h">
       <Filter>Gluttony</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Gluttony\Window.h">
+      <Filter>Gluttony</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Plattform\Windows\WindowsWin.h">
+      <Filter>Plattform\Windows</Filter>
     </ClInclude>
     <ClInclude Include="src\glpch.h" />
   </ItemGroup>
@@ -40,8 +58,17 @@
     <ClCompile Include="src\Gluttony\Application.cpp">
       <Filter>Gluttony</Filter>
     </ClCompile>
+    <ClCompile Include="src\Gluttony\Layer.cpp">
+      <Filter>Gluttony</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Gluttony\LayerStack.cpp">
+      <Filter>Gluttony</Filter>
+    </ClCompile>
     <ClCompile Include="src\Gluttony\Log.cpp">
       <Filter>Gluttony</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Plattform\Windows\WindowsWin.cpp">
+      <Filter>Plattform\Windows</Filter>
     </ClCompile>
     <ClCompile Include="src\glpch.cpp" />
   </ItemGroup>
