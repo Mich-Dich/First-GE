@@ -1,9 +1,0 @@
-[submodule "Gluttony/vendor/spdlog"]
-	path = Gluttony/vendor/spdlog
-	url = https://github.com/gabime/spdlog
-[submodule "Gluttony/vendor/GLFW"]
-	path = Gluttony/vendor/GLFW
-	url = https://github.com/Mich-Dich/glfw
-[submodule "Gluttony/vendor/imgui"]
-	path = Gluttony/vendor/imgui
-	url = https://github.com/Mich-Dich/imgui
